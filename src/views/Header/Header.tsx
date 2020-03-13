@@ -2,12 +2,10 @@ import * as React from 'react';
 
 import {
   Animated,
-  Image,
   Platform,
   StyleSheet,
   View,
   I18nManager,
-  MaskedViewIOS,
   ViewStyle,
   LayoutChangeEvent,
   StyleProp,
@@ -583,39 +581,13 @@ class Header extends React.PureComponent<Props, State> {
       key: `scene_${props.scene.key}`,
     };
 
-    if (
-      options.headerLeft ||
-      options.headerBackImage ||
-      Platform.OS !== 'ios' ||
-      transitionPreset !== 'uikit'
-    ) {
-      return (
-        <View {...wrapperProps}>
-          {title}
-          {left}
-          {right}
-        </View>
-      );
-    } else {
-      return (
-        <MaskedViewIOS
-          {...wrapperProps}
-          maskElement={
-            <View style={styles.iconMaskContainer}>
-              <Image
-                source={require('../assets/back-icon-mask.png')}
-                style={styles.iconMask}
-              />
-              <View style={styles.iconMaskFillerRect} />
-            </View>
-          }
-        >
-          {title}
-          {left}
-          {right}
-        </MaskedViewIOS>
-      );
-    }
+    return (
+      <View {...wrapperProps}>
+        {title}
+        {left}
+        {right}
+      </View>
+    );
   };
 
   render() {
