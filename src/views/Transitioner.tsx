@@ -246,6 +246,7 @@ class Transitioner extends React.Component<Props, State> {
         // @ts-ignore
         const positionHasChanged = position.__getValue() !== toValue;
         if (indexHasChanged && positionHasChanged) {
+          // @ts-ignore
           timing(position, {
             ...transitionSpec,
             toValue: nextProps.navigation.state.index,

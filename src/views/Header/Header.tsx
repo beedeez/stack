@@ -5,7 +5,6 @@ import {
   Platform,
   StyleSheet,
   View,
-  I18nManager,
   ViewStyle,
   LayoutChangeEvent,
   StyleProp,
@@ -574,8 +573,6 @@ class Header extends React.PureComponent<Props, State> {
       headerTitleContainerStyle: options.headerTitleContainerStyle,
     });
 
-    const { transitionPreset } = this.props;
-
     const wrapperProps = {
       style: styles.header,
       key: `scene_${props.scene.key}`,
@@ -794,26 +791,6 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: 'transparent',
-  },
-  iconMaskContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  iconMaskFillerRect: {
-    flex: 1,
-    backgroundColor: '#d8d8d8',
-    marginLeft: -5,
-  },
-  iconMask: {
-    // These are mostly the same as the icon in ModularHeaderBackButton
-    height: 23,
-    width: 14.5,
-    marginLeft: 8.5,
-    marginTop: -2.5,
-    alignSelf: 'center',
-    resizeMode: 'contain',
-    transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }],
   },
   // eslint-disable-next-line react-native/no-unused-styles
   background: {},
