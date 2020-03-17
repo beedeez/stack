@@ -110,6 +110,7 @@
     ]
   },
   "dependencies": {
+    "react-device-detect": "^1.11.14",
     "prop-types": "^15.7.2"
   }
 }

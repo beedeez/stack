@@ -43,6 +43,7 @@ import {
   HeaderProps,
   NavigationStackConfig,
 } from '../../types';
+import { isMobile } from '../../utils/detect';
 
 type Props = NavigationStackConfig & {
   isLandscape: boolean;
@@ -447,6 +448,10 @@ class StackViewLayout extends React.Component<Props, State> {
   }
 
   private isGestureEnabled() {
+    if (!isMobile) {
+      return false;
+    }
+
     const gesturesEnabled = this.props.transitionProps.scene.descriptor.options
       .gesturesEnabled;
     return typeof gesturesEnabled === 'boolean'
@@ -523,6 +528,10 @@ class StackViewLayout extends React.Component<Props, State> {
   private handlePanGestureStateChange = ({
     nativeEvent,
   }: PanGestureHandlerGestureEvent) => {
+    if (!isMobile) {
+      return;
+    }
+
     // @ts-ignore
     if (nativeEvent.oldState === GestureState.ACTIVE) {
       // Gesture was cancelled! For example, some navigation state update
