@@ -1,0 +1,1 @@
+{"version":3,"sources":["detect.tsx"],"names":["isMobile","isIE"],"mappings":"8FAAO,GAAMA,CAAAA,QAAQ,CAAG,IAAjB,C,0BACA,GAAMC,CAAAA,IAAI,CAAG,KAAb,C","sourcesContent":["export const isMobile = true;\nexport const isIE = false;\n"]}

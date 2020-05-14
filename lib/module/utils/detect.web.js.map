@@ -1,0 +1,1 @@
+{"version":3,"sources":["detect.web.tsx"],"names":["isMobile","isIE"],"mappings":"AAAA,OAASA,QAAT,CAAmBC,IAAnB,KAA+B,qBAA/B,CAEA,OAASD,QAAT,CAAmBC,IAAnB","sourcesContent":["import { isMobile, isIE } from 'react-device-detect';\n\nexport { isMobile, isIE };\n"]}

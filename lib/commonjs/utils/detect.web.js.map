@@ -1,0 +1,1 @@
+{"version":3,"sources":["detect.web.tsx"],"names":[],"mappings":"yRAAA","sourcesContent":["import { isMobile, isIE } from 'react-device-detect';\n\nexport { isMobile, isIE };\n"]}
